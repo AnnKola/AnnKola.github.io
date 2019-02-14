@@ -4,19 +4,11 @@
     box-sizing: border-box;
 }
 
-/* 100,200,300,400,700 */
-
 body,
 html {
     font-family: 'Exo 2', sans-serif;
     font-size: 16pt;
 }
-
-/* .container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
-} */
 
 h1 {
     font-size: 28pt;
@@ -63,6 +55,7 @@ p {
     height: 38px;
     border-radius: 19px;
     box-shadow: 0 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -80,6 +73,7 @@ img {
 nav {
     display: flex;
     position: fixed;
+    justify-content: space-around;
     z-index: 1;
     width: 100%;
     top: 0;
@@ -97,14 +91,16 @@ nav .logo {
 
 ul.main {
     display: none;
+    justify-content: center;
 }
 
 ul.main>li {
     list-style: none;
+    padding-right: 40px;
 }
 
-ul.main>li.fb {
-    width: 16pt;
+ul.main>li.fb img {
+    width: 25px;
 }
 
 ul.main>li>a {
@@ -157,11 +153,14 @@ section.header p {
 
 /* Product */
 
+.bg-product {
+    background-color: #f7f7f7;
+}
+
 section.product {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #f7f7f7;
     padding: 0 20px;
 }
 
@@ -170,6 +169,8 @@ section.product {
     padding: 50px 0;
     transition: .2s linear;
     cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .product-items:hover {
@@ -221,7 +222,8 @@ section.inspirations {
     cursor: pointer;
 }
 
-.inspirations-items.first:hover .items-hover {
+.inspirations-items.first:hover .items-hover,
+.inspirations-items.second:hover .items-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -295,10 +297,13 @@ section.about {
 
 /* Contact */
 
+.bg-footer {
+    background-color: #000;
+}
+
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: #000;
     color: white;
     padding: 80px 20px;
 }
